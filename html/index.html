@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+	<title>Air Compressor Monitoring System</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link href="C:\Users\Simar Singh\Desktop\html\stylesheets\bootstrap.min.css" rel="stylesheet" /><script src="C:\Users\Simar Singh\Desktop\html\javascripts\jquery.min.js"></script><script src="C:\Users\Simar Singh\Desktop\html\javascripts\bootstrap.min.js"></script>
+</head>
+<body background="C:\Users\Simar Singh\Desktop\html\images\grass.jpg" bgproperties="fixed">
+<p>&nbsp;</p>
+<div class="container">
+<p><img src="C:\Users\Simar Singh\Desktop\html\images\carsan.png" alt="Logo" align= "left" ></p>
+<p><img src="C:\Users\Simar Singh\Desktop\html\images\NimBus.png" alt="Logo" align= "right" ></p>
+<h1 style="text-align: center;"><strong><span style="font-size:34px;">
+Air Compressor Monitoring System
+</span></strong></h1>
+<p>&nbsp;</p>
+<head>
+<style type="text/css">
+table {
+    width:100%;
+}
+table, th, td {
+    border: 2px solid black;
+}
+</style>
+</head>
+<ul class="nav nav-tabs">
+	<li class="active" style="text-align: center;"><a data-toggle="tab" href="#sensor1">SENSOR 1</a></li>
+	<li style="text-align: center;"><a data-toggle="tab" href="#sensor2">SENSOR 2</a></li>
+	<li style="text-align: center;"><a data-toggle="tab" href="#sensor3">SENSOR 3</a></li>
+	<li style="text-align: center;"><a data-toggle="tab" href="#sensor4">SENSOR 4</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade in active" id="sensor1">
+<h3>Sensor 1 Readings</h3>
+
+<p>&nbsp;</p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" width="800">
+	<tbody>
+		<tr>
+			<th style="text-align: center;">Date</th>
+			<th style="text-align: center;">Sensor</th>
+			<th style="text-align: center;">Temperature</th>
+			<th style="text-align: center;">Humidity</th>
+
+		<tr>
+		<?php
+        while($temperature=mysql_fetch_assoc($temperatures)){
+                echo "<tr>";
+                echo "<td>".$temperature['dateandtime']."</td>";
+                echo "<td>".$temperature['sensor']."</td>";
+                echo "<td>".$temperature['temperature']."</td>";
+                echo "<td>".$temperature['humidity']."</td>";
+                echo "<tr>";
+        }
+?>
+	</tbody>
+</table>
+</div>
+
+<div class="tab-pane fade" id="sensor2">
+<h3>Sensor 2 Readings</h3>
+
+<p>&nbsp;</p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" width="800">
+	<tbody>
+		<tr>
+			<th style="text-align: center;">Date</th>
+			<th style="text-align: center;">Sensor</th>
+			<th style="text-align: center;">Temperature</th>
+			<th style="text-align: center;">Humidity</th>
+	
+		<tr>
+		<?php
+        while($temperature=mysql_fetch_assoc($temperatures)){
+                echo "<tr>";
+                echo "<td>".$temperature['dateandtime']."</td>";
+                echo "<td>".$temperature['sensor']."</td>";
+                echo "<td>".$temperature['temperature']."</td>";
+                echo "<td>".$temperature['humidity']."</td>";
+                echo "<tr>";
+        }
+?>
+	</tbody>
+</table>
+</div>
+
+<div class="tab-pane fade" id="sensor3">
+<h3>Sensor 3 Readings</h3>
+
+<p>&nbsp;</p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" width="800">
+	<tbody>
+		<tr>
+			<th style="text-align: center;">Date</th>
+			<th style="text-align: center;">Sensor</th>
+			<th style="text-align: center;">Temperature</th>
+			<th style="text-align: center;">Humidity</th>
+	
+		<tr><?php
+        while($temperature=mysql_fetch_assoc($temperatures)){
+                echo "<tr>";
+                echo "<td>".$temperature['dateandtime']."</td>";
+                echo "<td>".$temperature['sensor']."</td>";
+                echo "<td>".$temperature['temperature']."</td>";
+                echo "<td>".$temperature['humidity']."</td>";
+                echo "<tr>";
+        }
+?>
+	</tbody>
+</table>
+</div>
+
+<div class="tab-pane fade" id="sensor4">
+<h3>Sensor 4 Readings</h3>
+
+<p>&nbsp;</p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" width="800">
+	<tbody>
+		<tr>
+			<th style="text-align: center;">Date</th>
+			<th style="text-align: center;">Sensor</th>
+			<th style="text-align: center;">Temperature</th>
+			<th style="text-align: center;">Humidity</th>
+
+		<tr><?php
+        while($temperature=mysql_fetch_assoc($temperatures)){
+                echo "<tr>";
+                echo "<td>".$temperature['dateandtime']."</td>";
+                echo "<td>".$temperature['sensor']."</td>";
+                echo "<td>".$temperature['temperature']."</td>";
+                echo "<td>".$temperature['humidity']."</td>";
+                echo "<tr>";
+        }
+?>
+	</tbody>
+</table>
+</div>
+</html>

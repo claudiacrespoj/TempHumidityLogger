@@ -1,0 +1,43 @@
+{
+"mysql":[{
+	"host":"localhost",
+	"user":"logger",
+	"password":"password",
+	"database":"temperatures"
+	}],
+"sensors":[{
+	"sensor1":"roomTemperature",
+	"sensor2":"Inside"
+	}],
+"triggerlimits":[{
+	"sensor1lowlimit":"-20",
+	"sensor2lowlimit":"-15",
+	"sensor1highlimit":"20",
+	"sensor2highlimit":"20"
+	}],
+"sensorgpios":[{
+	"gpiosensor1":"22",
+	"gpiosensor2":"23"
+	}],
+"mailinfo":[{
+	"senderaddress":"testmail16@car-san.com",
+	"receiveraddress":"acidberry91@gmail.com",
+	"username":"testmail16@car-san.com",
+	"password":"JusTest8*",
+	"subjectmessage":"Info from temperature logger",
+	"subjectwarning":"Warning from temperature logger"
+	}],
+"sqlBackupDump":[{
+	"backupDumpEnabled":"y",
+	"backupHour":"23"
+	}],
+"connectionCheck":[{
+	"connectionCheckEnabled":"y",
+	"connectionCheckDay":"5",
+	"connectionCheckHour":"23"
+	}],
+"sensortype":"22",
+"sensoramount":"1",
+"sqlbackuppath":"/home/pi/DHT22-TemperatureLogger/Backups/",
+"adafruitpath":"/home/pi/Adafruit_Python_DHT/examples/AdafruitDHT.py"
+}
